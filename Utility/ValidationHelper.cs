@@ -68,6 +68,14 @@ namespace TabularExtractor.Utility
 
         private  string GetText(ColumnSetting columnSetting)
         {
+            if (columnSetting.ColumnName == Enums.ColumnName.Expiry)
+                return "";
+            if (columnSetting.ColumnName == Enums.ColumnName.MOL)
+                return "";
+            if (columnSetting.ColumnName == Enums.ColumnName.PageNo)
+                return "";
+            if (columnSetting.ColumnName == Enums.ColumnName.LineNo)
+                return "";
             var column = columnSetting.Condinates;
             var rect = new RectangleJ(column.XAxis.Value, column.YAxis.Value, column.Width.Value, column.Height.Value);
 

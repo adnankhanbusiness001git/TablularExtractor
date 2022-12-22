@@ -16,7 +16,8 @@ namespace TablularExtractor
             if (Convert.ToBoolean(ConfigurationManager.AppSettings["Development"]))
                 config = Helper.GeneratePDFConfiguration();
 
-            ResponseManager response = DataOperations.ManageText(config);
+            //ResponseManager response = DataOperations.ManageText(config);
+            var abc = DataOperations.ImportPDF(config.FilePath);
         }
     }
 }
