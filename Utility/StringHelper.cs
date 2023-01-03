@@ -12,6 +12,18 @@ namespace TablularExtractor.Utility
     {
         internal static string RemoveInitialExtraDetailsTill(string cipherText)
         {
+            var regex = new Regex(string.Format(@"\b{0}\b", "Labour Card Details"),
+                          RegexOptions.IgnoreCase);
+            if (regex.Matches(cipherText).Count > 1)
+            {
+                var result = new List<string>();
+                for (int i = 0; i < regex.Matches(cipherText).Count; i++)
+                {
+                    result.Add(cipherText.Substring(regex.Matches(cipherText)[i].Index));
+                }
+                //return result.Replace("Labour Card Details", "").Replace("*", "").Replace("?", "");
+            }
+
             string text = cipherText.Substring(cipherText.LastIndexOf("Labour Card Details"));
             return text.Replace("Labour Card Details", "").Replace("*", "").Replace("?", "");
         }
