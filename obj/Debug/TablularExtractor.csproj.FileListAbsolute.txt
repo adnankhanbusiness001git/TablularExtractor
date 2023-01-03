@@ -9,3 +9,9 @@ E:\Projects\ZZ 001 Practice Projects\TablularExtractor\TablularExtractor\bin\Deb
 E:\Projects\ZZ 001 Practice Projects\TablularExtractor\TablularExtractor\obj\Debug\TablularExtractor.csproj.CopyComplete
 E:\Projects\ZZ 001 Practice Projects\TablularExtractor\TablularExtractor\obj\Debug\TablularExtractor.exe
 E:\Projects\ZZ 001 Practice Projects\TablularExtractor\TablularExtractor\obj\Debug\TablularExtractor.pdb
+E:\Projects\ZZ 001 Practice Projects\TablularExtractor\TablularExtractor\bin\Debug\EntityFramework.dll
+E:\Projects\ZZ 001 Practice Projects\TablularExtractor\TablularExtractor\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\ZZ 001 Practice Projects\TablularExtractor\TablularExtractor\bin\Debug\EntityFramework.xml
+E:\Projects\ZZ 001 Practice Projects\TablularExtractor\TablularExtractor\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\ZZ 001 Practice Projects\TablularExtractor\TablularExtractor\obj\Debug\TablularExtractor.Migrations.addtable.resources
+E:\Projects\ZZ 001 Practice Projects\TablularExtractor\TablularExtractor\obj\Debug\TablularExtractor.csproj.GenerateResource.cache

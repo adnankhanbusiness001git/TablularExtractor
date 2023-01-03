@@ -167,7 +167,7 @@ namespace TabularExtractor.Model
                 PdfReader reader = new PdfReader((string)Filename);
                 for (int page = 1; page <= reader.NumberOfPages; page++)
                 {
-                    ITextExtractionStrategy its = new iTextSharp.text.pdf.parser.LocationTextExtractionStrategy();
+                    ITextExtractionStrategy its = new iTextSharp.text.pdf.parser.SimpleTextExtractionStrategy();
                     String cipherText = PdfTextExtractor.GetTextFromPage(reader, page, its);
                     cipherText = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(cipherText)));
                     strText = strText + "\n" + cipherText;

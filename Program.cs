@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TablularExtractor.Manager;
 using TabularExtractor.Model;
 
 namespace TablularExtractor
@@ -17,7 +18,7 @@ namespace TablularExtractor
                 config = Helper.GeneratePDFConfiguration();
 
             //ResponseManager response = DataOperations.ManageText(config);
-            var abc = DataOperations.ImportPDF(config.FilePath);
+            InitiateRequest.ImportPDF(config.FilePath);
         }
     }
 }

@@ -36,10 +36,17 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,7 +57,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\DataRepository.cs" />
+    <Compile Include="Data\TabularContext.cs" />
+    <Compile Include="Migrations\202301030844043_addtable.cs" />
+    <Compile Include="Migrations\202301030844043_addtable.Designer.cs">
+      <DependentUpon>202301030844043_addtable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Employee.cs" />
     <Compile Include="Manager\DataOperations.cs" />
+    <Compile Include="Manager\InitiateRequest.cs" />
     <Compile Include="Model\ColumnCordinate.cs" />
     <Compile Include="Model\ColumnFinalSetting.cs" />
     <Compile Include="Model\ColumnProps.cs" />
@@ -63,11 +79,17 @@
     <Compile Include="TextVisualizer\RectAndText.cs" />
     <Compile Include="Utility\Enums.cs" />
     <Compile Include="Utility\Helper.cs" />
+    <Compile Include="Utility\StringHelper.cs" />
     <Compile Include="Utility\ValidationHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202301030844043_addtable.resx">
+      <DependentUpon>202301030844043_addtable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
